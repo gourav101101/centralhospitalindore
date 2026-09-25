@@ -1,0 +1,43 @@
+.error__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .title {
+        font-size: 72px;
+        margin-top: 50px;
+        font-weight: 800;
+        line-height: 80px;
+        text-align: center;
+        margin-bottom: 12px;
+        letter-spacing: 0.36px;
+
+        @media #{$lg} {
+            font-size: 65px;
+            line-height: 70px;
+        }
+
+        @media #{$md} {
+            font-size: 55px;
+            line-height: 65px;
+        }
+
+        @media #{$sm} {
+            font-size: 45px;
+            line-height: 60px;
+        }
+
+        @media #{$xs} {
+            font-size: 30px;
+            margin-top: 30px;
+            line-height: 35px;
+        }
+    }
+
+    p {
+        max-width: 698px;
+        text-align: center;
+        margin-bottom: 48px;
+    }
+}

@@ -1,0 +1,1 @@
+<section class="v2-section"><div class="container"><div class="v2-heading"><div><span class="eyebrow">EXPERIENCE MEETS EMPATHY</span><h2>The people<br><span>behind your care.</span></h2></div><p>Get to know our specialists and find the right doctor for your next visit.</p></div>@include('partials.care-team', ['team'=> $doctors])</div></section>

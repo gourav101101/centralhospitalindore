@@ -1,0 +1,27 @@
+#!/bin/sh
+set -eu
+
+envsubst '${PORT}' < /etc/nginx/http.d/default.conf.template > /etc/nginx/http.d/default.conf
+
+mkdir -p storage/framework/cache storage/framework/sessions storage/framework/views storage/logs \
+    public/uploads/doctors public/uploads/blogs public/uploads/testimonials public/uploads/brochures \
+    database
+
+touch database/database.sqlite
+
+chown -R www-data:www-data storage bootstrap/cache public/uploads database
+chmod -R 775 storage bootstrap/cache database
+chmod 664 database/database.sqlite
+
+php artisan migrate --force
+php artisan db:seed --force
+
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+
+chown -R www-data:www-data storage bootstrap/cache public/uploads database
+chmod -R 775 storage bootstrap/cache database
+
+php-fpm -D
+exec nginx -g 'daemon off;'

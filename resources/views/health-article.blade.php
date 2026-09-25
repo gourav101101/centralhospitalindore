@@ -1,0 +1,7 @@
+@extends('layouts.app')
+@section('title', $blog->title . ' - Central Hospital Indore')
+@section('content')
+<section class="page-hero"><div class="container"><div class="breadcrumb"><a href="{{ route('home') }}">Home</a><span class="separator">/</span><a href="{{ route('health-library') }}">Health Library</a><span class="separator">/</span><span style="color:white">Article</span></div><h1>{{ $blog->title }}</h1></div></section>
+<section class="article-page"><article><div class="article-page__meta"><span>{{ $blog->tag ?: 'Health guide' }}</span> · {{ $blog->published_at?->format('d M Y') }} · {{ $blog->author }}</div>@if($blog->image && is_file(public_path($blog->image)))<img src="{{ asset($blog->image) }}" alt="" class="article-page__image">@endif<div class="article-page__content">{!! nl2br(e(strip_tags($blog->content))) !!}</div><a href="{{ route('health-library') }}" class="btn btn-outline">← Back to Health Library</a></article></section>
+<style>.article-page{padding:76px 0;background:#f5f8fc}.article-page article{max-width:820px;margin:auto;padding:clamp(26px,5vw,56px);background:#fff;border:1px solid #EDF2F7;border-radius:18px}.article-page__meta{margin-bottom:24px;color:var(--primary);font-size:13px;font-weight:700}.article-page__image{width:100%;max-height:430px;margin-bottom:32px;object-fit:cover;border-radius:12px}.article-page__content{margin-bottom:32px;color:var(--text-secondary);font-size:16px;line-height:1.85}</style>
+@endsection

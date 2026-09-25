@@ -1,0 +1,225 @@
+/* A denser editorial rhythm, with useful next steps in every chapter. */
+@media(min-width: 1440px) { .container { max-width: 1480px; padding-inline: 52px; } }
+.chi-hero { background: radial-gradient(ellipse at 90% 30%, #e5d2b844, transparent 45%), radial-gradient(ellipse at 5% 0%, #dceafa77, transparent 50%), #f5f8fc; }
+.chi-hero-grid { min-height: 0; padding-top: clamp(24px, 4vh, 44px); padding-bottom: 28px; gap: 64px; }
+.chi-hero-copy h1 { font-size: clamp(48px, 4.5vw, 72px); }
+.chi-hero-note { margin-top: 24px; padding-top: 16px; }
+.chi-hero-scene { max-width: 620px; justify-self: end; }
+.chi-scene-frame { box-shadow: 0 24px 60px -24px #15365c55, 0 1px 0 #fff inset; }
+.chi-launchpad { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; padding-top: 0; padding-bottom: 30px; }
+.chi-launchpad>a { display: flex; align-items: center; gap: 16px; padding: 22px; background: #fff; border: 1px solid #dce5ee; border-right-width: 0; text-decoration: none; color: #173c67; transition: background .25s, transform .25s; }
+.chi-launchpad>a:first-child { border-radius: 16px 0 0 16px; }
+.chi-launchpad>a:last-child { border-radius: 0 16px 16px 0; border-right-width: 1px; }
+.chi-launchpad>a:hover { background: #edf4fb; transform: translateY(-3px); }
+.chi-launchpad small { display: block; font-size: 10px; letter-spacing: .06em; margin-bottom: 6px; color: #60778e; }
+.chi-launchpad strong { display: block; font-size: 17px; line-height: 1.35; letter-spacing: -.025em; }
+.chi-launchpad b { margin-left: auto; font-size: 22px; font-weight: 400; }
+.chi-launch-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 13px; background: linear-gradient(145deg, #f3f8ff, #d8e7f7); color: #245b91; box-shadow: 0 3px 0 #c7d7e8; flex-shrink: 0; }
+.chi-launch-icon svg { width: 25px; height: 25px; }
+.chi-launch-sand { background: linear-gradient(145deg, #fff9ee, #ead8bb); color: #946b35; box-shadow: 0 3px 0 #dfc8a4; }
+.chi-launch-portraits { display: flex; min-width: 70px; }
+.chi-launch-portraits img { width: 44px; height: 44px; border: 3px solid #fff; border-radius: 50%; object-fit: cover; object-position: 50% 20%; box-shadow: 0 3px 8px #18395a18; }
+.chi-launch-portraits img+img { margin-left: -17px; }
+.v2-section { padding: 66px 0; }
+.v2-heading { margin-bottom: 30px; }
+.v2-care-card, .v2-care-card:nth-child(n) { min-height: 300px; background: linear-gradient(145deg, #fff 40%, #f0f5fa); border-radius: 18px; padding: 25px; }
+.v2-care-card svg { background: linear-gradient(145deg, #f7fbff, #dce9f5); box-shadow: 0 4px 0 #cbdcea, 0 8px 14px #204c7910; margin-bottom: 22px; transform: rotate(-4deg); transition: transform .35s; }
+.v2-care-card:nth-child(even) svg { background: linear-gradient(145deg, #fffaf1, #eee1cb); box-shadow: 0 4px 0 #ddcbb0, 0 8px 14px #73562910; color: #8c6738; transform: rotate(4deg); }
+.v2-care-card:hover svg { transform: translateY(-3px) rotate(0); }
+.v2-care-card small { font-size: 14px; margin-bottom: 30px; }
+.v2-care-card h3 { font-size: 24px; }
+.v2-care-card p { margin-bottom: 12px; }
+.v2-section-foot { margin-top: 20px; }
+.chi-people-section { padding: 60px 0; background: #112f50; background-image: radial-gradient(ellipse at 5% 30%, #37659370, transparent 60%); color: #fff; }
+.chi-people-layout { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.5fr); gap: 55px; align-items: center; }
+.chi-people-story { position: relative; }
+.chi-people-story .eyebrow { color: #c3d5e8; }
+.chi-people-story h2 { font-size: clamp(34px, 3vw, 44px); line-height: 1.15; color: #fff; margin: 20px 0; }
+.chi-people-story h2 span { color: #e4cfac; }
+.chi-people-story p { color: #c7d6e6; font-size: 17px; max-width: 360px; }
+.chi-emblem { width: 74px; height: 74px; display: grid; place-items: center; border-radius: 22px; background: linear-gradient(145deg, #fff, #c2d4e7); box-shadow: 5px 7px 0 #ffffff12, 10px 17px 32px #061c3270; transform: rotate(-8deg); }
+.chi-emblem img { width: 62px; height: 62px; border-radius: 50%; }
+.chi-care-principles { list-style: none; margin: 22px 0; padding: 0; }
+.chi-care-principles li { font-size: 15px; color: #dfE8f2; margin: 10px 0; display: flex; align-items: center; gap: 12px; }
+.chi-care-principles li:before { content: '✓'; color: #e4cfac; }
+.chi-people-story .text-action { color: #ecd9ba; }
+.chi-people-doctors { min-width: 0; }
+.chi-people-doctors .v2-team-grid { gap: 18px; }
+.chi-people-doctors .v2-team-card { grid-template-columns: minmax(0,1fr); border: 1px solid #ffffff35; border-radius: 18px; background: #fff; }
+.chi-people-doctors .v2-team-visual { min-height: 0; height: clamp(205px, 18vw, 270px); background: #eef1f4; }
+.chi-people-doctors .v2-team-visual img { object-fit: contain; object-position: center; }
+.chi-people-doctors .v2-team-info { padding: 24px; }
+.chi-people-doctors .v2-team-info h3 { font-size: 27px; }
+.chi-people-doctors .v2-team-info p { font-size: 15px; margin-bottom: 18px; min-height: 76px; }
+.chi-team-directory { display: flex; justify-content: space-between; gap: 15px; color: #e0eaf4; text-decoration: none; margin-top: 20px; font-size: 14px; }
+.chi-team-directory strong { color: #ecd9ba; font-weight: 500; }
+.chi-facilities-section .v2-facilities { gap: 28px; grid-template-columns: minmax(0,1.1fr) minmax(0,1fr); }
+.chi-facilities-section .v2-facility-feature { flex-direction: row; align-items: center; padding: 28px; gap: 25px; min-height: 330px; overflow: hidden; background: linear-gradient(145deg, #e7eef7, #fff 70%); border: 1px solid #dbe5ee; }
+.chi-facilities-section .v2-facility-feature>div:last-child { flex: 1; }
+.chi-facilities-section .v2-facility-feature h3 { font-size: 34px; }
+.chi-facilities-section .v2-facility-feature p { font-size: 16px; margin-bottom: 20px; }
+.chi-spatial-art { position: relative; width: 165px; height: 245px; flex-shrink: 0; display: grid; place-items: center; perspective: 600px; }
+.chi-spatial-cross { font-family: Arial, sans-serif; font-size: 160px; font-weight: 700; color: #477bae; line-height: 1; text-shadow: 1px 1px #224f7b, 2px 2px #224f7b, 3px 3px #224f7b, 4px 4px #224f7b, 5px 5px #224f7b, 6px 6px #224f7b, 7px 7px #224f7b, 12px 20px 22px #244b7133; transform: rotateY(-20deg) rotateZ(-12deg); transition: transform .6s; }
+.v2-facility-feature:hover .chi-spatial-cross { transform: rotateY(10deg) rotateZ(0); }
+.chi-spatial-ring { position: absolute; width: 160px; height: 160px; border: 1px solid #9db9d4; border-radius: 50%; transform: rotateX(55deg) rotateZ(-30deg); }
+.chi-spatial-label { position: absolute; bottom: 0; font-size: 8px; letter-spacing: .1em; color: #54718c; }
+.chi-facilities-section .v2-facility-list>div { padding: 13px 0; }
+.chi-facilities-section .v2-facility-list h3 { font-size: 21px; }
+.chi-facilities-section .v2-facility-list p { font-size: 15px; }
+.v2-payments { margin-top: 25px; padding-top: 20px; }
+.v2-payments>div { margin: 14px 0; }
+.v2-story-card { min-height: 290px; }
+.v2-story-card blockquote { font-size: 19px; }
+@media(min-width: 1500px) { .chi-hero-grid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); } }
+@media(max-width: 1200px) { .chi-hero-grid { gap: 32px; } .chi-launchpad>a { padding: 18px 14px; gap: 12px; } .chi-launchpad strong { font-size: 15px; } .chi-launchpad small { font-size: 9px; } .chi-people-layout { gap: 30px; } .chi-people-doctors .v2-team-info { padding: 20px; } .chi-people-doctors .v2-team-info h3 { font-size: 23px; } .chi-spatial-art { width: 110px; } .chi-spatial-ring { width: 115px; height: 115px; } .chi-spatial-cross { font-size: 125px; } }
+@media(max-width: 968px) { .chi-hero-copy h1 { font-size: 42px; } .chi-launchpad { grid-template-columns: 1fr; padding-bottom: 24px; } .chi-launchpad>a { padding: 16px 20px; border-right-width: 1px; border-bottom-width: 0; } .chi-launchpad>a:first-child { border-radius: 14px 14px 0 0; } .chi-launchpad>a:last-child { border-radius: 0 0 14px 14px; border-bottom-width: 1px; } .chi-launchpad strong { font-size: 17px; } .chi-people-layout { grid-template-columns: minmax(0,1fr); } .chi-people-story { display: grid; grid-template-columns: 1fr auto; gap: 0 20px; } .chi-people-story h2, .chi-people-story p, .chi-care-principles, .chi-people-story .text-action { grid-column: 1; } .chi-emblem { grid-column: 2; grid-row: 1/4; align-self: center; margin-right: 20px; } .chi-people-story p { max-width: none; } .chi-facilities-section .v2-facilities { grid-template-columns: minmax(0,1fr); } .chi-spatial-art { width: 180px; } .chi-facilities-section .v2-facility-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 25px; } }
+@media(max-width: 640px) { .chi-hero-grid { padding-top: 25px; gap: 24px; } .chi-hero-copy h1 { font-size: 40px; } .chi-hero-scene { justify-self: stretch; } .chi-launchpad small { font-size: 10px; } .v2-section, .chi-people-section { padding: 48px 0; } .chi-people-doctors .v2-team-grid { grid-template-columns: minmax(0,1fr); } .chi-people-doctors .v2-team-visual { height: 275px; } .chi-people-doctors .v2-team-info h3 { font-size: 28px; } .chi-people-doctors .v2-team-info p { min-height: 0; } .chi-emblem { width: 55px; height: 55px; margin: 0; } .chi-emblem img { width: 46px; height: 46px; } .chi-people-story h2 { font-size: 33px; grid-column: 1/-1; } .chi-people-story p, .chi-care-principles { grid-column: 1/-1; } .chi-team-directory { flex-direction: column; gap: 6px; } .chi-facilities-section .v2-facility-feature { flex-direction: column; gap: 15px; align-items: stretch; } .chi-spatial-art { width: 100%; height: 150px; } .chi-spatial-label { right: 0; bottom: 35px; max-width: 90px; } .chi-facilities-section .v2-facility-list { grid-template-columns: minmax(0,1fr); } }
+@media(min-width: 969px) {
+  .chi-facilities-section { padding: 50px 0; }
+  .chi-facilities-section .v2-facility-list { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px 24px; align-content: center; }
+  .chi-facilities-section .v2-facility-list>div:last-child { grid-column: 1/-1; }
+  .chi-facilities-section .v2-payments { display: flex; flex-wrap: wrap; gap: 12px 22px; align-items: center; justify-content: center; }
+  .chi-facilities-section .v2-payments>div { margin: 0; }
+  .chi-facilities-section .v2-payments small { flex-basis: 100%; }
+}
+@media(min-width: 969px) and (max-height: 820px) {
+  .chi-hero-copy h1 { font-size: 54px; margin-bottom: 20px; }
+  .chi-hero-grid { padding-top: 22px; padding-bottom: 22px; }
+  .chi-hero-note { margin-top: 18px; padding-top: 12px; }
+  .chi-hero-scene { max-width: 540px; }
+  .chi-launchpad { padding-bottom: 22px; }
+  .chi-launchpad>a { padding-block: 17px; }
+}
+@media(prefers-reduced-motion: reduce) { .chi-spatial-cross, .chi-launchpad>a, .v2-care-card svg { transition: none; } }
+
+/* Full-height opening and a larger, quieter editorial direction. */
+:root { --nav-height: 94px; }
+.chi-home .container { max-width: 1680px; padding-inline: clamp(24px, 5vw, 96px); }
+.chi-home .chi-hero { min-height: calc(100svh - var(--nav-height)); display: flex; flex-direction: column; background: #102d4e; background-image: radial-gradient(ellipse at 100% 0%, #315a8260, transparent 65%); color: #fff; }
+.chi-home .chi-hero-grid { flex: 1; width: 100%; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 4vw, 75px); min-height: 0; padding-top: clamp(30px, 5vh, 65px); padding-bottom: 32px; }
+.chi-home .chi-hero-copy .eyebrow { color: #c3d3e3; font-size: 12px; letter-spacing: .15em; }
+.chi-home .chi-hero-copy .eyebrow i { background: #d5b785; }
+.chi-home .chi-hero-copy h1 { color: #fff; font-size: clamp(58px, 5.4vw, 100px); font-weight: 500; letter-spacing: -.065em; line-height: 1.02; margin-bottom: 28px; }
+.chi-home .chi-hero-copy h1 span { color: #d9bf96; }
+.chi-home .chi-hero-copy>p { max-width: 520px; font-size: clamp(18px, 1.2vw, 21px); color: #c2d2e2; line-height: 1.75; }
+.chi-home .chi-hero-actions { margin-top: 32px; gap: 28px; }
+.chi-home .chi-hero-actions .action { background: #e8d5b6; border-color: #e8d5b6; color: #16334f; padding: 18px 25px; font-size: 17px; border-radius: 8px; }
+.chi-home .chi-hero-actions .action:hover { background: #f6e8d2; }
+.chi-home .chi-hero-actions .text-action { color: #fff; font-size: 16px; }
+.chi-home .chi-hero-note { border-color: #ffffff25; margin-top: 30px; padding-top: 20px; }
+.chi-home .chi-hero-note strong { color: #e3ecf5; }
+.chi-home .chi-hero-note small { color: #b8cadd; }
+.chi-home .chi-hero-note>span { color: #d9bf96; border-color: #ffffff30; }
+.chi-home .chi-hero-note>span { position: relative; font-size: 0; }
+.chi-home .chi-hero-note>span::before,
+.chi-home .chi-hero-note>span::after { content: ''; position: absolute; inset: 50% auto auto 50%; width: 16px; height: 2px; border-radius: 2px; background: #d9bf96; transform: translate(-50%, -50%); }
+.chi-home .chi-hero-note>span::after { transform: translate(-50%, -50%) rotate(90deg); }
+.chi-home .chi-hero-scene { max-width: none; width: 100%; }
+.chi-home .chi-scene-frame { padding: 0; border-radius: 3px; background: #284664; box-shadow: 24px 24px 0 #ffffff05; }
+.chi-home .chi-scene-frame img { border-radius: 3px; }
+.chi-home .chi-scene-badge { top: 18px; left: 18px; background: #102d4ee8; color: #f3e7d3; border-color: #ffffff20; font-size: 10px; padding: 10px 14px; }
+.chi-home .chi-scene-badge i { background: #d9bf96; }
+.chi-home .chi-hero-scene figcaption { color: #b8cadb; padding-top: 20px; font-size: 12px; }
+.chi-home .chi-hero-scene figcaption a { color: #e7d3b1; }
+.chi-home .chi-launchpad { flex-shrink: 0; padding-top: 0; padding-bottom: 0; }
+.chi-home .chi-launchpad>a { padding: 24px 20px 28px; border: 0; border-top: 1px solid #ffffff30; border-radius: 0; background: transparent; color: #fff; gap: 18px; }
+.chi-home .chi-launchpad>a+a { border-left: 1px solid #ffffff20; }
+.chi-home .chi-launchpad>a:first-child { padding-left: 0; }
+.chi-home .chi-launchpad>a:last-child { padding-right: 0; }
+.chi-home .chi-launchpad>a:hover { background: #ffffff06; transform: none; }
+.chi-home .chi-launchpad small { color: #a9c0d7; font-size: 10px; }
+.chi-home .chi-launchpad strong { font-size: 17px; font-weight: 500; }
+.chi-home .chi-launch-icon { background: #ffffff0c; border: 1px solid #ffffff20; box-shadow: none; color: #dcc39e; }
+.chi-home .chi-launch-portraits img { border-color: #254361; }
+.chi-home .v2-section { padding: clamp(70px, 7vw, 110px) 0; }
+.chi-home .v2-heading { margin-bottom: 45px; align-items: end; }
+.chi-home .v2-heading h2, .chi-home .chi-people-story h2 { font-size: clamp(42px, 3.8vw, 64px); font-weight: 500; line-height: 1.09; letter-spacing: -.055em; }
+.chi-home .v2-heading h2 span { color: #788998; }
+.chi-home .v2-heading>p { max-width: 420px; font-size: 18px; }
+.chi-home .v2-care-grid { gap: 0; border-block: 1px solid #dce4ec; }
+.chi-home .v2-care-card, .chi-home .v2-care-card:nth-child(n) { background: transparent; border: 0; border-radius: 0; min-height: 345px; padding: 32px; box-shadow: none; }
+.chi-home .v2-care-card+.v2-care-card { border-left: 1px solid #dce4ec; }
+.chi-home .v2-care-card:hover { background: #f4f7fa; transform: none; }
+.chi-home .v2-care-card svg { background: none; box-shadow: none; padding: 0; transform: none; width: 50px; height: 50px; margin-bottom: 30px; }
+.chi-home .v2-care-card h3 { font-size: 28px; }
+.chi-home .v2-care-card small { font-size: 15px; line-height: 1.7; color: #65788c; }
+.chi-home .v2-section-foot { margin-top: 26px; }
+.chi-home .chi-people-section { background: #edf2f7; padding: 85px 0; }
+.chi-home .chi-people-layout { grid-template-columns: minmax(0, .9fr) minmax(0, 1.45fr); gap: 60px; }
+.chi-home .chi-people-story .eyebrow { color: #536f8c; }
+.chi-home .chi-people-story h2 { color: #163959; }
+.chi-home .chi-people-story h2 span { color: #74889b; }
+.chi-home .chi-people-story p, .chi-home .chi-care-principles li { color: #526c84; font-size: 17px; }
+.chi-home .chi-people-story .text-action, .chi-home .chi-team-directory, .chi-home .chi-team-directory strong { color: #174b86; }
+.chi-home .chi-emblem { width: 64px; height: 64px; border-radius: 50%; transform: none; box-shadow: none; margin-bottom: 25px; }
+.chi-home .chi-emblem img { width: 60px; height: 60px; }
+.chi-home .chi-people-doctors .v2-team-card { border-radius: 4px; border: 0; }
+.chi-home .chi-people-doctors .v2-team-visual { height: clamp(240px, 23vw, 350px); }
+.chi-home .chi-people-doctors .v2-team-info { padding: 28px; }
+.chi-home .chi-people-doctors .v2-team-info h3 { font-size: 28px; }
+.chi-home .chi-care-principles li:before { color: #966e3f; }
+.chi-home .chi-facilities-section { background: #fbf8f3; }
+.chi-home .chi-facilities-section .v2-facility-feature { border-radius: 4px; background: #e9dfcf; border: 0; padding: 38px; min-height: 360px; }
+.chi-home .chi-spatial-cross { font-size: 180px; }
+.chi-home .chi-spatial-art { width: 180px; }
+.chi-home .chi-facilities-section .v2-facility-list h3 { font-size: 25px; }
+.chi-home .chi-facilities-section .v2-facility-list p { font-size: 17px; }
+.chi-home .chi-facilities-section .v2-facility-list>div { padding: 20px 0; }
+.chi-home .v2-stories-section { background: #fff; }
+.chi-home .v2-story-card { border-radius: 4px; padding: 34px; min-height: 340px; background: #f6f8fa; border: 0; }
+.chi-home .v2-story-card blockquote { font-size: 21px; }
+.chi-home .v2-visit { padding: 90px 0; background: #153859; }
+.chi-home .v2-visit h2 { font-size: clamp(52px, 5vw, 82px); font-weight: 500; line-height: 1.05; }
+.chi-home .chi-footer { padding-top: 65px; }
+@media(min-width: 969px) and (max-height: 850px) {
+ .chi-home .chi-hero-grid { padding-block: 22px; }
+ .chi-home .chi-hero-copy h1 { font-size: clamp(52px, 4.4vw, 78px); margin-bottom: 20px; }
+ .chi-home .chi-hero-copy>p { font-size: 18px; }
+ .chi-home .chi-hero-actions { margin-top: 22px; }
+ .chi-home .chi-hero-note { margin-top: 18px; padding-top: 14px; }
+ .chi-home .chi-hero-scene { max-width: min(100%, 64vh); }
+ .chi-home .chi-launchpad>a { padding-block: 18px; }
+}
+@media(max-width: 1200px) { .chi-home .container { padding-inline: 32px; } .chi-home .chi-hero-grid { gap: 32px; } .chi-home .chi-launchpad>a { gap: 12px; padding-inline: 14px; } .chi-home .chi-launchpad strong { font-size: 15px; } .chi-home .chi-people-layout { gap: 32px; } .chi-home .v2-care-card { padding: 26px; } .chi-home .chi-facilities-section .v2-facility-feature { padding: 24px; } .chi-home .chi-spatial-art { width: 120px; } }
+@media(max-width: 968px) {
+ .chi-home .chi-hero-grid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+ .chi-home .chi-hero-copy h1 { font-size: 45px; }
+ .chi-home .chi-hero-copy>p { font-size: 17px; }
+ .chi-home .chi-hero-actions { gap: 18px; }
+ .chi-home .chi-hero-actions .action { font-size: 15px; padding: 15px 18px; }
+ .chi-home .chi-launchpad { grid-template-columns: repeat(3,minmax(0,1fr)); }
+ .chi-home .chi-launchpad>a { align-items: start; flex-wrap: wrap; padding: 18px 12px; }
+ .chi-home .chi-launchpad b { display: none; }
+ .chi-home .chi-launchpad small { font-size: 9px; }
+ .chi-home .chi-launchpad strong { font-size: 14px; }
+ .chi-home .chi-people-layout { grid-template-columns: minmax(0,1fr); }
+ .chi-home .v2-care-card:nth-child(3) { border-left: 0; }
+ .chi-home .v2-care-card:nth-child(n+3) { border-top: 1px solid #dce4ec; }
+}
+@media(max-width: 640px) {
+ .chi-home .container { padding-inline: 24px; }
+ .chi-home .chi-hero { min-height: calc(100svh - var(--nav-height)); }
+ .chi-home .chi-hero-grid { grid-template-columns: minmax(0,1fr); gap: 28px; padding-top: 32px; padding-bottom: 26px; }
+ .chi-home .chi-hero-copy h1 { font-size: clamp(42px, 11vw, 64px); }
+ .chi-home .chi-hero-copy>p { font-size: 16px; }
+ .chi-home .chi-hero-copy .eyebrow { font-size: 10px; }
+ .chi-home .chi-hero-actions { gap: 18px; }
+ .chi-home .chi-hero-actions .action, .chi-home .chi-hero-actions .text-action { font-size: 14px; }
+ .chi-home .chi-hero-scene figcaption { font-size: 10px; }
+ .chi-home .chi-launchpad { grid-template-columns: minmax(0,1fr); padding-bottom: 12px; }
+ .chi-home .chi-launchpad>a, .chi-home .chi-launchpad>a:first-child, .chi-home .chi-launchpad>a:last-child { align-items: center; flex-wrap: nowrap; border-left: 0; padding: 18px 0; }
+ .chi-home .chi-launchpad small { font-size: 9px; }
+ .chi-home .chi-launchpad strong { font-size: 16px; }
+ .chi-home .chi-launchpad b { display: block; }
+ .chi-home .v2-section, .chi-home .chi-people-section { padding: 60px 0; }
+ .chi-home .v2-heading h2, .chi-home .chi-people-story h2 { font-size: 38px; }
+ .chi-home .v2-heading { margin-bottom: 30px; }
+ .chi-home .v2-heading>p { font-size: 17px; }
+ .chi-home .v2-care-card, .chi-home .v2-care-card:nth-child(n) { border-left: 0; padding: 28px 0; min-height: 290px; }
+ .chi-home .v2-care-card+.v2-care-card { border-top: 1px solid #dce4ec; }
+ .chi-home .chi-people-doctors .v2-team-visual { height: 300px; }
+ .chi-home .chi-facilities-section .v2-facility-feature { padding: 26px; }
+ .chi-home .chi-spatial-art { width: 100%; }
+ .chi-home .v2-story-card { padding: 28px; }
+ .chi-home .v2-visit { padding: 60px 0; }
+}

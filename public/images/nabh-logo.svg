@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300" width="100%" height="100%">
+  <defs>
+    <!-- Upper text arc path (left-to-right along top) -->
+    <path id="upperArc" d="M 25,150 A 125,125 0 0,1 275,150" fill="none" />
+    
+    <!-- Lower text arc path (left-to-right along bottom) -->
+    <path id="lowerArc" d="M 40,160 A 122,122 0 0,0 260,160" fill="none" />
+
+    <!-- Rich gradient for red border ring -->
+    <linearGradient id="redRingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CE181E" />
+      <stop offset="100%" stop-color="#A81016" />
+    </linearGradient>
+
+    <!-- Blue gradient for inner arch -->
+    <linearGradient id="blueArchGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0080D2" />
+      <stop offset="100%" stop-color="#005A9C" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Red Ring -->
+  <circle cx="150" cy="150" r="148" fill="url(#redRingGrad)" stroke="#8C0D12" stroke-width="1" />
+  
+  <!-- Inner White Disc -->
+  <circle cx="150" cy="150" r="100" fill="#FFFFFF" />
+
+  <!-- Upper Arc Text: PATIENT SAFETY & QUALITY OF CARE -->
+  <text fill="#FFFFFF" 
+        font-family="'Inter', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+        font-size="13" 
+        font-weight="800" 
+        letter-spacing="1.2px">
+    <textPath href="#upperArc" xlink:href="#upperArc" startOffset="50%" text-anchor="middle">
+      PATIENT SAFETY &amp; QUALITY OF CARE
+    </textPath>
+  </text>
+
+  <!-- Lower Arc Text: ★ ACCREDITED ★ -->
+  <text fill="#FFFFFF" 
+        font-family="'Inter', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+        font-size="14.5" 
+        font-weight="800" 
+        letter-spacing="2.8px">
+    <textPath href="#lowerArc" xlink:href="#lowerArc" startOffset="50%" text-anchor="middle">
+      ★ ACCREDITED ★
+    </textPath>
+  </text>
+
+  <!-- Inner Symbol Graphics -->
+  <g id="nabh-core-symbol">
+    <!-- Caduceus Background Columns -->
+    <g opacity="0.38" stroke="#0072CE" stroke-width="1.6" stroke-dasharray="2.5 2">
+      <line x1="130" y1="96" x2="130" y2="148" />
+      <line x1="134" y1="98" x2="134" y2="148" />
+      <line x1="170" y1="96" x2="170" y2="148" />
+      <line x1="166" y1="98" x2="166" y2="148" />
+    </g>
+
+    <!-- Medical Staff & Wings (Navy / Deep Blue) -->
+    <g fill="#0D2E5C" stroke="#0D2E5C">
+      <!-- Staff Knob -->
+      <circle cx="150" cy="88" r="3.5" stroke-width="0.5" />
+      <!-- Central Rod -->
+      <line x1="150" y1="89" x2="150" y2="154" stroke="#0D2E5C" stroke-width="2.6" stroke-linecap="round" />
+      
+      <!-- Wings -->
+      <!-- Left Wing -->
+      <path d="M 150,91 C 141,86 129,85 120,92 C 117,94 122,98 129,98 C 137,98 144,95 150,94 Z" stroke-width="0.6" />
+      <path d="M 148,94 C 139,93 129,94 124,101 C 128,103 136,102 148,97 Z" stroke-width="0.5" />
+      <!-- Right Wing -->
+      <path d="M 150,91 C 159,86 171,85 180,92 C 183,94 178,98 171,98 C 163,98 156,95 150,94 Z" stroke-width="0.6" />
+      <path d="M 152,94 C 161,93 171,94 176,101 C 172,103 164,102 152,97 Z" stroke-width="0.5" />
+
+      <!-- Entwined Serpents -->
+      <path d="M 143,101 C 139,106 140,111 150,115 C 160,119 161,126 151,130 C 141,134 140,140 150,145 C 157,148 157,152 150,154" 
+            fill="none" stroke="#0D2E5C" stroke-width="2.2" stroke-linecap="round" />
+      <path d="M 157,101 C 161,106 160,111 150,115 C 140,119 139,126 149,130 C 159,134 160,140 150,145 C 143,148 143,152 150,154" 
+            fill="none" stroke="#0D2E5C" stroke-width="2.2" stroke-linecap="round" />
+    </g>
+
+    <!-- Red Triangle at Base -->
+    <polygon points="150,110 102,185 198,185" fill="#D3242A" />
+
+    <!-- Blue Stylized Horseshoe Ring (Overlaid) -->
+    <path d="M 102,185 
+             L 122,185 
+             C 118,174 117,162 117,146 
+             C 117,124 131,106 150,106 
+             C 169,106 183,124 183,146 
+             C 183,162 182,174 178,185 
+             L 198,185 
+             C 201,172 203,159 203,146 
+             C 203,113 179,86 150,86 
+             C 121,86 97,113 97,146 
+             C 97,159 99,172 102,185 Z" 
+          fill="url(#blueArchGrad)" />
+
+    <!-- Overlap intersection shading -->
+    <polygon points="150,110 134,136 166,136" fill="#BD1C22" opacity="0.95" />
+
+    <!-- Clean Sharp NABH Lettering -->
+    <text x="150" y="218" 
+          fill="#0066B3" 
+          font-family="'Inter', 'Montserrat', 'Arial Black', -apple-system, sans-serif" 
+          font-size="31" 
+          font-weight="900" 
+          letter-spacing="4px" 
+          text-anchor="middle">NABH</text>
+  </g>
+</svg>

@@ -1,0 +1,7 @@
+@extends('admin.layouts.app')
+@section('title','Doctors | Central Hospital Indore Admin') @section('page-title','Doctors') @section('breadcrumb','Central Hospital Indore Admin | Doctors')
+@section('content')
+<div class="page-head"><div><h2>Doctors</h2><p>Manage doctor profiles shown on the website.</p></div><a class="button" href="{{ route('admin.doctors.create') }}">Add doctor</a></div>
+@if(session('success'))<div class="notice">{{ session('success') }}</div>@endif
+<div class="panel table-wrap"><table class="table"><thead><tr><th>Doctor</th><th>Department</th><th>Experience</th><th>Visibility</th><th></th></tr></thead><tbody>@forelse($doctors as $doctor)<tr><td><strong>{{ $doctor->name }}</strong><small>{{ $doctor->designation }}</small></td><td>{{ $doctor->department }}</td><td>{{ $doctor->experience ?: '-' }}</td><td><span class="pill {{ $doctor->is_active ? 'success' : 'danger' }}">{{ $doctor->is_active ? 'Visible' : 'Hidden' }}</span></td><td><a class="button button-muted" href="{{ route('admin.doctors.edit',$doctor) }}">Edit</a><form style="display:inline" method="post" action="{{ route('admin.doctors.destroy',$doctor) }}">@csrf @method('DELETE')<button class="button" onclick="return confirm('Remove this doctor?')">Remove</button></form></td></tr>@empty<tr><td colspan="5" class="empty">No doctors added yet.</td></tr>@endforelse</tbody></table></div>{{ $doctors->links() }}
+@endsection

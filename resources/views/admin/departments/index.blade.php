@@ -1,0 +1,7 @@
+@extends('admin.layouts.app')
+@section('title','Departments | Central Hospital Indore Admin') @section('page-title','Departments') @section('breadcrumb','Central Hospital Indore Admin | Departments')
+@section('content')
+<div class="page-head"><div><h2>Departments</h2><p>Manage specialities presented on the website.</p></div><a class="button" href="{{ route('admin.departments.create') }}">Add department</a></div>
+@if(session('success'))<div class="notice">{{ session('success') }}</div>@endif
+<div class="panel table-wrap"><table class="table"><thead><tr><th>Department</th><th>Description</th><th>Order</th><th>Visibility</th><th></th></tr></thead><tbody>@forelse($departments as $department)<tr><td><strong>{{ $department->name }}</strong><small>{{ $department->icon }}</small></td><td>{{ \Illuminate\Support\Str::limit($department->description,90) }}</td><td>{{ $department->sort_order }}</td><td><span class="pill {{ $department->is_active ? 'success' : 'danger' }}">{{ $department->is_active ? 'Visible' : 'Hidden' }}</span></td><td><a class="button button-muted" href="{{ route('admin.departments.edit',$department) }}">Edit</a><form style="display:inline" method="post" action="{{ route('admin.departments.destroy',$department) }}">@csrf @method('DELETE')<button class="button" onclick="return confirm('Remove this department?')">Remove</button></form></td></tr>@empty<tr><td colspan="5" class="empty">No departments added yet.</td></tr>@endforelse</tbody></table></div>{{ $departments->links() }}
+@endsection

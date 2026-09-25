@@ -1,0 +1,125 @@
+/* Quiet surfaces, precise spacing and a clear visual hierarchy. */
+:root { --bg-white: #ffffff; --bg-light: #f5f8f7; --text: #112641; --text-secondary: #5b6470; }
+body { background: #fff; }
+.container { max-width: 1320px; min-width: 0; }
+.v2-hero-top > *, .v2-heading > *, .v2-team-card > * { min-width: 0; }
+.eyebrow, .chi-eyebrow { letter-spacing: .11em; color: #4b5b70; font-size: 10px; font-weight: 600; margin-bottom: 18px; }
+#main-header.chi-header { background: #ffffffed; border-color: #e8ebee; }
+.chi-nav { min-height: 88px; }
+.chi-brand strong { font-size: 23px; letter-spacing: -.045em; }
+.chi-brand img { width: 54px; height: 54px; }
+.chi-desktop { gap: 28px; }
+.chi-desktop a { font-size: 13px; }
+.action, .chi-button { border-radius: 12px; gap: 24px; box-shadow: 0 4px 10px #10243d08; }
+.chi-nav-book { border-radius: 10px; }
+.text-action { border-bottom: 0; gap: 12px; }
+.text-action:hover { text-decoration: underline; text-underline-offset: 5px; }
+.v2-hero { padding-top: 72px; background: linear-gradient(180deg, #f7faf8 0%, #fff 90%); }
+.v2-hero-top { grid-template-columns: 1.9fr 1fr; gap: 40px; margin-bottom: 42px; }
+.v2-hero h1 { font-size: clamp(44px, 4.4vw, 64px); line-height: 1.13; letter-spacing: -.055em; }
+.v2-hero h1>span { color: #616f81; }
+.v2-hero-intro p { font-size: 16px; color: #5b6470; line-height: 1.8; }
+.v2-hospital { height: 430px; border-radius: 20px; box-shadow: 0 20px 50px #11264210; }
+.v2-photo-location { border: 1px solid #ffffff40; background: #112641d9; backdrop-filter: blur(12px); border-radius: 10px; }
+.v2-quick-links { margin-top: 24px; padding: 10px 0 28px; border-color: #e5e8ec; }
+.v2-quick-links>a { border-color: #e5e8ec; }
+.v2-quick-links strong { font-size: 21px; letter-spacing: -.035em; }
+.v2-quick-links>a>span { font-size: 9px; color: #616a76; letter-spacing: .08em; }
+.v2-section { padding: 104px 0; }
+.v2-heading { margin-bottom: 38px; }
+.v2-section h2, .v2-philosophy h2 { font-size: clamp(34px, 3.2vw, 46px); line-height: 1.17; letter-spacing: -.045em; }
+.v2-section h2 span { color: #6b7582; }
+.v2-heading>p { color: #616974; font-size: 15px; max-width: 360px; }
+.v2-care-grid { gap: 16px; }
+.v2-care-card, .v2-care-card:nth-child(n) { background: #fff; border: 1px solid #e1e5ea; border-radius: 16px; padding: 28px 24px; min-height: 320px; }
+.v2-care-card:hover { background: #f7faf8; border-color: #b7c1cf; transform: translateY(-4px); box-shadow: 0 14px 35px #11264109; }
+.v2-care-card svg { width: 42px; height: 42px; padding: 7px; box-sizing: content-box; background: #edf0f5; border-radius: 13px; margin-bottom: 26px; }
+.v2-care-card h3 { font-size: 22px; letter-spacing: -.035em; }
+.v2-care-card small { color: #5b6470; }
+.v2-circle-arrow { width: 30px; height: 30px; font-size: 18px; border-color: #d6dbe2; }
+.v2-philosophy { background: #11253f; padding-top: 80px; }
+.v2-philosophy:before, .page-hero:after { display: none; }
+.v2-philosophy h2 span { color: #aebed4; }
+.v2-philosophy-grid { gap: 100px; }
+.v2-values h3 { font-size: 22px; }
+.v2-values p, .v2-philosophy-grid>div>p { color: #bdc5d0; }
+.action-lime { background: #e5ebf2; border-color: #e5ebf2; }
+.v2-numbers { margin-top: 54px; padding-top: 30px; }
+.v2-numbers strong { font-size: 36px; color: #d9e2ed; }
+.v2-team-grid { gap: 24px; }
+.v2-team-card { grid-template-columns: 42% 1fr; background: #fff; border-color: #e1e5ea; border-radius: 18px; }
+.v2-team-visual { min-height: 320px; }
+.v2-team-visual img { object-position: center 20%; }
+.v2-team-info { padding: 30px 26px; }
+.v2-team-info h3 { font-size: 27px; }
+.v2-team-info p { color: #616974; }
+.v2-team-info .eyebrow { color: #52647b; }
+.v2-sand { background: #f5f8f6; }
+.v2-facility-feature { background: #e7ebf0; border-radius: 18px; }
+.v2-facility-feature>.v2-cross { font-size: 48px; }
+.v2-facility-list>div>span { display: none; }
+.v2-facility-list h3 { font-size: 22px; }
+.v2-facility-list>div { border-color: #dfe3e8; }
+.v2-payments strong { font-size: 14px; padding: 8px 15px; border: 1px solid #dfe3e8; border-radius: 8px; background: #fff; }
+.v2-payments>div { gap: 12px; }
+.v2-quote { border: 1px solid #e1e5ea; padding: 36px; border-radius: 18px; background: #f9fbfa; }
+.v2-quote blockquote { font-size: 22px; }
+.quote-symbol { color: #8394ab; font-size: 72px; }
+.v2-stories-section { background: linear-gradient(180deg, #fff 0%, #f7faf8 100%); }
+.v2-stories-intro { max-width: 360px; }
+.v2-stories-intro p { margin: 0 0 20px; color: #616974; font-size: 15px; }
+.v2-stories-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.v2-story-card { min-height: 330px; padding: 30px; border: 1px solid #e1e5ea; border-radius: 18px; background: #fff; display: flex; flex-direction: column; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.v2-story-card:hover { transform: translateY(-4px); border-color: #bdc6d1; box-shadow: 0 18px 42px #1126410c; }
+.v2-story-top { display: flex; align-items: start; justify-content: space-between; gap: 20px; }
+.v2-story-card .quote-symbol { font-size: 58px; line-height: .75; }
+.v2-story-rating { color: #546e8f; font-size: 12px; letter-spacing: .16em; white-space: nowrap; }
+.v2-story-card blockquote { margin: 25px 0 32px; color: #18365c; font-size: 18px; line-height: 1.75; flex: 1; }
+.v2-story-card .v2-quote-person { padding-top: 22px; border-top: 1px solid #e7eaed; }
+.v2-story-card .v2-quote-person>span { background: #edf0f5; color: #3f536d; }
+.v2-story-empty { grid-column: 1 / -1; padding: 36px; border: 1px solid #e1e5ea; border-radius: 18px; background: #fff; }
+.v2-visit { background: #11253f; border-radius: 0; }
+.v2-visit h2 span { color: #aebed4; }
+.v2-service-directory>a { background: #fff; border-color: #e1e5ea; padding: 32px; }
+.v2-service-directory>a:hover { background: #f4f6f8; }
+.v2-values-grid article { border: 1px solid #e1e5ea; background: #fff; }
+@media(max-width: 1100px) {
+  .v2-team-card { grid-template-columns: 1fr; }
+  .v2-team-visual { min-height: 0; aspect-ratio: 4 / 3; }
+  .v2-team-visual img { object-fit: contain; background: #f1f4f3; }
+}
+@media(max-width: 968px) {
+  .v2-hero-top { grid-template-columns: 1fr; }
+  .v2-hero { padding-top: 48px; }
+  .v2-section { padding: 76px 0; }
+  .v2-philosophy-grid { gap: 42px; }
+  .v2-quick-links strong { font-size: 18px; }
+  .v2-stories-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .v2-story-card:last-child { grid-column: 1 / -1; min-height: 260px; }
+}
+@media(max-width: 640px) {
+  .v2-hero-top { grid-template-columns: minmax(0, 1fr); }
+  .v2-hero h1 { overflow-wrap: anywhere; }
+  .chi-brand { min-width: 0; flex-shrink: 1; }
+  .chi-nav { min-height: 76px; }
+  .chi-brand strong { font-size: 20px; }
+  .chi-brand img { width: 46px; height: 46px; }
+  .v2-hero { padding-top: 36px; }
+  .v2-hero h1 { font-size: clamp(33px, 8.5vw, 49px); }
+  .v2-hero-top { gap: 23px; margin-bottom: 30px; }
+  .v2-hospital { height: 280px; border-radius: 14px; }
+  .v2-quick-links { margin-top: 12px; }
+  .v2-quick-links strong { font-size: 21px; }
+  .v2-section { padding: 60px 0; }
+  .v2-care-card { min-height: 270px; }
+  .v2-team-card { grid-template-columns: 1fr; }
+  .v2-team-visual { aspect-ratio: 4 / 3; }
+  .v2-team-info { padding: 26px; }
+  .v2-team-info h3 { font-size: 27px; }
+  .v2-team-info p { font-size: 14px; }
+  .v2-quote { padding: 26px; }
+  .v2-stories-grid { grid-template-columns: 1fr; }
+  .v2-story-card, .v2-story-card:last-child { grid-column: auto; min-height: 280px; padding: 26px; }
+  .v2-stories-intro { max-width: none; margin-top: 20px; }
+  .v2-numbers strong { font-size: 30px; }
+}

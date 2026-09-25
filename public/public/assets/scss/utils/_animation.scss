@@ -1,0 +1,35 @@
+/* === Animation (index 01) === */
+
+@keyframes shape-animaiton1 {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+.shape-animaiton1 {
+  animation-duration: 4s;
+  animation-direction: alternate;
+  animation-name: shape-animaiton1;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.59, 0.59, 1, 1);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotate linear infinite;
+  animation-duration: 10s;
+  animation-timing-function: cubic-bezier(0.59, 0.59, 1, 1);
+}

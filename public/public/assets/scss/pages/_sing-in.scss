@@ -1,0 +1,212 @@
+.sing-in__wrapper {
+    background: #F6F6F6;
+    border-radius: 15px;
+    padding: 64px 56px;
+    max-width: 870px;
+    margin: 0 auto;
+
+    @media #{$md} {
+        padding: 30px;
+    }
+
+    @media #{$xs} {
+        padding: 30px 20px;
+    }
+
+    .title {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 56px;
+        margin-bottom: 16px;
+        letter-spacing: 0.5px;
+
+        @media #{$md} {
+            font-size: 40px;
+        }
+
+        @media #{$xs} {
+            font-size: 30px;
+            line-height: 35px;
+        }
+    }
+
+    .form-wrap {
+        display: flex;
+        gap: 20px;
+        margin-top: 56px;
+
+        @media #{$md} {
+            gap: 0;
+            margin-top: 30px;
+            flex-direction: column;
+        }
+
+    }
+
+    input {
+        flex: 1;
+        padding: 20px 16px;
+        border-radius: 8px;
+        width: 100%;
+        border: none;
+        outline: none;
+
+        &::placeholder {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #646463;
+        }
+    }
+
+    .input-group {
+        display: flex;
+        width: 100%;
+        margin-bottom: 32px;
+        flex-direction: column;
+
+        span {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 26px;
+            display: inline-block;
+            margin-bottom: 12px;
+            color: var(--black);
+            letter-spacing: 0.5px;
+        }
+    }
+
+    .rr-btn {
+        width: 100%;
+    }
+
+    .or-text {
+        color: #646463;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-transform: capitalize;
+        display: flex;
+        margin: 32px 0;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+            background-color: rgba(201, 201, 200, 0.24);
+            content: "";
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: -2;
+        }
+
+        &:after {
+            background-color: #F6F6F6;
+            content: "";
+            width: 50px;
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+    }
+
+    .icon-wrapper {
+        display: flex;
+        gap: 24px;
+
+        @media #{$xs} {
+            flex-wrap: wrap;
+        }
+
+        a {
+            gap: 8px;
+            width: 100%;
+            display: flex;
+            padding: 15px 24px;
+            border-radius: 8px;
+            align-items: center;
+            font-size: 16px;
+            color: var(--black);
+            font-weight: 400;
+            line-height: 24px;
+            justify-content: center;
+            border: 1px solid rgba(201, 201, 200, 0.24);
+
+            i {
+                color: var(--primary);
+            }
+        }
+    }
+
+    .checkbox-wrap {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+        gap: 10px;
+        justify-content: space-between;
+
+        @media #{$xs} {
+            flex-wrap: wrap;
+        }
+
+    }
+
+    .checkbox-group {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        input[type="checkbox"] {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        label {
+            color: var(--black);
+
+            a {
+                color: var(--primary);
+            }
+        }
+    }
+
+    .forgot-password {
+        a {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            color: var(--primary);
+            font-family: var(--font_monts);
+        }
+    }
+
+    .sign-up {
+        text-align: center;
+        margin-top: 32px;
+
+        .title {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            font-family: var(--font_jakarta);
+
+            @media #{$xs} {
+                font-size: 14px;
+            }
+
+            a {
+                color: var(--primary);
+            }
+        }
+    }
+}
