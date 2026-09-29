@@ -6,6 +6,7 @@
     
     <title>@yield('title', $siteSettings->hospital_name . ' | Indore')</title>
     <meta name="description" content="@yield('meta_description', $siteSettings->hospital_name . ', near Rasoma Square, provides multi-speciality care and 24×7 emergency support.')">
+    <link rel="canonical" href="{{ url()->current() }}">
     <meta name="keywords" content="{{ $siteSettings->hospital_name }}, Hospital in Indore, Rasoma Square Hospital, Multi-speciality Healthcare">
     
     <meta property="og:title" content="{{ $siteSettings->hospital_name }} | Indore">

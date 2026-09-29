@@ -137,6 +137,10 @@
               <div style="font-weight: 700; margin-bottom: 8px; color: var(--primary);">Need immediate help?</div>
               <div>Call the hospital: <strong>{{ $siteSettings->phone_display }}</strong></div>
             </div>
+            @if(session('appointment_whatsapp_url'))
+              <p><a class="btn btn-primary" href="{{ session('appointment_whatsapp_url') }}" target="_blank" rel="noopener noreferrer">Continue on WhatsApp</a></p>
+              <p style="font-size:13px;margin:12px 0 24px">Your request is saved. You can also send it to our team on WhatsApp.</p>
+            @endif
             <button onclick="document.getElementById('appointment-success').style.display = 'none'; document.getElementById('appointment-form').style.display = 'flex';" class="btn btn-outline">
               Book Another Appointment
             </button>
@@ -160,7 +164,7 @@
               {{ $siteSettings->phone_display }}
             </div>
             <p style="font-size: 14px; opacity: 0.85; margin: 0; line-height: 1.5;">
-              Call our team for opening updates and consultation availability.
+              Call our team for appointments and consultation availability.
             </p>
           </div>
 

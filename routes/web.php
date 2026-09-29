@@ -12,19 +12,23 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/sitemap.xml', [\App\Http\Controllers\SeoController::class, 'sitemap'])->name('sitemap');
+Route::get('/robots.txt', [\App\Http\Controllers\SeoController::class, 'robots'])->name('robots');
+
 Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/doctors', [PageController::class, 'doctors'])->name('doctors');
 Route::get('/doctors/{doctor}', [PageController::class, 'doctorProfile'])->name('doctor.profile');
 Route::get('/patient-stories', [PageController::class, 'patientStories'])->name('patient-stories');
 Route::get('/services', [PageController::class, 'services'])->name('services');
+Route::view('/patient-guide', 'patient-guide')->name('patient-guide');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
-Route::post('/contact', [PageController::class, 'storeContactMessage'])->name('contact.store');
+Route::post('/contact', [PageController::class, 'storeContactMessage'])->middleware('throttle:public-forms')->name('contact.store');
 Route::get('/appointment', [PageController::class, 'appointment'])->name('appointment');
-Route::post('/appointment', [PageController::class, 'storeAppointment'])->name('appointment.store');
+Route::post('/appointment', [PageController::class, 'storeAppointment'])->middleware('throttle:public-forms')->name('appointment.store');
 Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
 Route::get('/resources-downloads', [PageController::class, 'downloads'])->name('downloads');
-Route::post('/feedback', [PageController::class, 'storeFeedback'])->name('feedback.store');
+Route::post('/feedback', [PageController::class, 'storeFeedback'])->middleware('throttle:public-forms')->name('feedback.store');
 Route::get('/health-library', [PageController::class, 'healthLibrary'])->name('health-library');
 Route::get('/health-library/{blog:slug}', [PageController::class, 'healthArticle'])->name('health-article');
 Route::get('/privacy-policy', [PageController::class, 'privacy'])->name('privacy');
@@ -32,7 +36,7 @@ Route::get('/terms-of-service', [PageController::class, 'terms'])->name('terms')
 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/login', [AdminAuthController::class, 'showLogin'])->name('login');
-    Route::post('/login', [AdminAuthController::class, 'login'])->name('login.store');
+    Route::post('/login', [AdminAuthController::class, 'login'])->middleware('throttle:admin-login')->name('login.store');
 
     Route::middleware('auth')->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');

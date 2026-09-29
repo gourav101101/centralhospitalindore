@@ -33,3 +33,20 @@
 @media(max-width:1000px){.chi-inner .v2-service-directory:has(.speciality-card){grid-template-columns:repeat(2,minmax(0,1fr));gap:38px 25px}}
 @media(max-width:700px){.chi-inner .v2-service-directory:has(.speciality-card){grid-template-columns:1fr;gap:35px}.speciality-card-image{border-top-right-radius:55px}.chi-inner #main-content .speciality-card h3{font-size:31px}.speciality-card-copy{padding:22px 0 25px}}
 @media(prefers-reduced-motion:reduce){.speciality-card-image img,.speciality-card-arrow{transition:none}.speciality-card:hover img,.speciality-card:focus-visible img{transform:none}}
+/* Patient and visitor guide */
+.patient-guide-nav{display:flex;flex-wrap:wrap;gap:12px;padding-block:24px;border-bottom:1px solid #d3deeb}
+.patient-guide-nav a{padding:10px 16px;border:1px solid #ccd7e5;border-radius:28px;text-decoration:none;font-size:13px;color:#173b65}
+.patient-guide-nav a:hover,.patient-guide-nav a:focus-visible{background:#173b65;color:#fff}
+.patient-guide-insurance{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.patient-guide-insurance p{line-height:1.8;margin:20px 0}
+.patient-guide-note{padding:32px;background:#fff;border:1px solid #d3deeb;border-radius:3px 36px 3px 3px}
+.patient-guide-note ul{padding-left:20px;list-style:disc;margin-top:20px}
+.patient-guide-note li{margin:12px 0;line-height:1.7}
+.patient-guide-faq{max-width:950px}
+.patient-guide-faq details{border-bottom:1px solid #ccd7e5;padding:24px 0}
+.patient-guide-faq summary{cursor:pointer;font-size:20px;line-height:1.5;color:#173b65;padding-right:16px}
+.patient-guide-faq details p{max-width:780px;margin:18px 0 0;line-height:1.8;color:#526780}
+.patient-guide-faq a{text-decoration:underline}
+.patient-guide-prompt{padding-block:24px}
+.inner-patient-guide section[id]{scroll-margin-top:120px}
+@media(max-width:700px){.patient-guide-insurance{grid-template-columns:1fr;gap:30px}.patient-guide-note{padding:25px}.patient-guide-nav{gap:8px}.patient-guide-nav a{font-size:12px;padding:9px 12px}.patient-guide-faq summary{font-size:18px}}

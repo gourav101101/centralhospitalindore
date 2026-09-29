@@ -14,9 +14,15 @@ class AdminUserSeeder extends Seeder
     public function run(): void
     {
         $email = env('ADMIN_EMAIL', 'admin@centralhospitalindore.com');
-        $password = env('ADMIN_PASSWORD', 'admin123');
+        if (User::where('email', $email)->exists()) {
+            return;
+        }
+        $password = env('ADMIN_PASSWORD');
+        if (!$password || strlen($password) < 12) {
+            throw new \RuntimeException('Set ADMIN_PASSWORD to a unique password of at least 12 characters before seeding.');
+        }
 
-        User::updateOrCreate(
+        User::firstOrCreate(
             ['email' => $email],
             [
                 'name' => env('ADMIN_NAME', 'Central Hospital Indore Administrator'),

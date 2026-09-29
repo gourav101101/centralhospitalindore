@@ -83,7 +83,7 @@ document.querySelectorAll('[data-space]').forEach(button => {
         const diagnostics = button.dataset.space === '1';
         spaceImage.src = diagnostics ? spaceImage.dataset.diagnostics : spaceImage.dataset.arrival;
         spaceImage.alt = diagnostics ? 'Illustrative diagnostic imaging room; planned facilities subject to confirmation' : 'Architectural concept of the hospital entrance';
-        document.getElementById('elite-space-caption').textContent = diagnostics ? 'Illustrative image · Planned facilities subject to confirmation' : 'Architectural concept · Hospital under construction';
+        document.getElementById('elite-space-caption').textContent = diagnostics ? 'Illustrative image · Planned facilities subject to confirmation' : 'Architectural concept';
         document.querySelectorAll('[data-space]').forEach(tab => {
             tab.classList.toggle('is-active', tab === button);
             tab.setAttribute('aria-pressed', String(tab === button));

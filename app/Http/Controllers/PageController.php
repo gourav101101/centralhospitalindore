@@ -59,7 +59,13 @@ class PageController extends Controller
 
     public function downloads()
     {
-        return view('downloads', ['brochures' => Brochure::latest()->get()]);
+        $publicRoot = realpath(public_path()).DIRECTORY_SEPARATOR;
+        $brochures = Brochure::latest()->get()->filter(function ($brochure) use ($publicRoot) {
+            $path = realpath(public_path($brochure->file_path));
+            return $path && str_starts_with($path, $publicRoot) && is_file($path);
+        });
+
+        return view('downloads', compact('brochures'));
     }
 
     public function contact()
@@ -122,7 +128,9 @@ class PageController extends Controller
         
         $whatsappUrl = "https://wa.me/{$whatsappNumber}?text=" . urlencode($message);
 
-        return redirect()->away($whatsappUrl);
+        return redirect()->to(route('appointment').'#appointment-form-container')
+            ->with('appointment_success', true)
+            ->with('appointment_whatsapp_url', $whatsappUrl);
     }
 
     public function storeContactMessage(Request $request)
@@ -150,7 +158,9 @@ class PageController extends Controller
         
         $whatsappUrl = "https://wa.me/{$whatsappNumber}?text=" . urlencode($message);
 
-        return redirect()->away($whatsappUrl);
+        return redirect()->to(route('contact').'#contact-form-container')
+            ->with('contact_success', true)
+            ->with('contact_whatsapp_url', $whatsappUrl);
     }
 
     public function healthLibrary()

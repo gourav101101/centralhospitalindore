@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+﻿# Central Hospital Indore
 
-## Getting Started
+Hospital website and administration panel built with Laravel 13, PHP 8.3+, Blade and Vite. Public content is written for the hospital's operational launch, including 24-hour availability.
 
-First, run the development server:
+## Local development
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Run `composer install` and `npm ci`.
+2. Copy `.env.example` to `.env`, configure the database and set `APP_URL`.
+3. Run `php artisan key:generate` for a new installation.
+4. Set `ADMIN_EMAIL` and a unique `ADMIN_PASSWORD` of at least 12 characters before seeding.
+5. Run `php artisan migrate --seed` and `php artisan storage:link`.
+6. Run `npm run build` and `php artisan serve`. Run `npm run dev` separately for asset development.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The administration panel is at `/admin/login`. Appointments and enquiries are saved in the database and show confirmation; visitors may then choose to continue on WhatsApp. WhatsApp messages and email notifications are not sent automatically.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Run `php artisan test` (isolated in-memory SQLite database), `npm run build`, and `php artisan view:cache`.
 
-## Learn More
+## Production deployment
 
-To learn more about Next.js, take a look at the following resources:
+- Point the web server document root to `public/` and enable HTTPS.
+- Set `APP_ENV=production`, `APP_DEBUG=false`, the final HTTPS `APP_URL`, and `SESSION_SECURE_COOKIE=true`.
+- Configure persistent database, storage and cache; back up the database and uploaded files.
+- Run `composer install --no-dev --optimize-autoloader`, `npm ci`, `npm run build`, `php artisan migrate --force`, `php artisan storage:link`, and `php artisan optimize`.
+- Seed only a new installation after configuring admin credentials. Existing administrator passwords are preserved by seeding.
+- Verify phone, WhatsApp, email, address and map links in site settings.
+- Verify `/sitemap.xml`, `/robots.txt`, forms and uploaded images on the final domain. The sitemap includes active doctors and published articles.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The resource page displays only files present under `public/`. AI-enhanced hospital images are documented in `public/images/hospital/README.md` and retain illustrative captions.

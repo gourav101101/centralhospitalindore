@@ -4,7 +4,7 @@
 @section('meta_description', 'Explore photos of Central Hospital Indore in Indore — our facilities, departments, patient care areas, and hospital events.')
 
 @section('content')
-  @include('partials.inner-hero', ['label' => 'Gallery', 'eyebrow' => 'A SENSE OF PLACE', 'headline' => 'Space to pause.', 'accent' => 'Room for care.', 'description' => 'Explore our hospital through photographs and discover the vision for its next chapter.', 'image' => 'images/atelier/arrival-concept.webp', 'imageAlt' => 'Hospital arrival hall interior concept', 'caption' => 'Interior concept · Hospital under construction', 'cta' => 'Explore the gallery', 'href' => '#gallery-collection'])
+  @include('partials.inner-hero', ['label' => 'Gallery', 'eyebrow' => 'A SENSE OF PLACE', 'headline' => 'Space to pause.', 'accent' => 'Room for care.', 'description' => 'Explore our hospital through photographs and discover the vision for its next chapter.', 'image' => 'images/hospital/reception-preview.webp', 'imageAlt' => 'AI completion preview of the actual hospital reception', 'caption' => 'AI completion preview', 'cta' => 'Explore the gallery', 'href' => '#gallery-collection'])
 
   <section id="gallery-collection" style="padding: 80px 0; background: var(--bg-light); min-height: 60vh;">
     <div class="container">
@@ -38,10 +38,10 @@
           @endforeach
         </div>
       @else
-        <div class="v2-heading"><div><span class="eyebrow">OUR NEXT CHAPTER</span><h2>A vision for<br><em>feeling better.</em></h2></div><p>Our hospital is under construction. These concepts share our vision for the spaces to come.</p></div>
+        <div class="v2-heading"><div><span class="eyebrow">OUR NEXT CHAPTER</span><h2>A vision for<br><em>feeling better.</em></h2></div><p>Reception and exterior previews are AI-enhanced from actual site photos. The recovery room is an illustrative concept.</p></div>
         <div class="gallery-grid">
-        @foreach([['images/atelier/arrival-concept.webp','A calmer arrival'],['images/atelier/recovery-concept.webp','A place to recover'],['images/hospital-concept-v3.webp','A new perspective']] as [$imagePath,$imageTitle])
-          <div class="gallery-item"><div class="gallery-item__inner"><img src="{{ asset($imagePath) }}" alt="{{ $imageTitle }} — architectural concept" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__caption">{{ $imageTitle }}<small style="display:block;font:11px Arial,sans-serif;margin-top:10px;letter-spacing:.08em">ARCHITECTURAL CONCEPT</small></div><button class="gallery-item__zoom" data-lightbox="{{ asset($imagePath) }}" data-caption="{{ $imageTitle }} — architectural concept, hospital under construction" type="button" aria-label="Enlarge {{ $imageTitle }}">↗</button></div></div></div>
+        @foreach([['images/hospital/reception-preview.webp','Reception completion preview'],['images/atelier/recovery-concept.webp','A place to recover'],['images/hospital/exterior-preview.webp','Exterior completion preview']] as [$imagePath,$imageTitle])
+          <div class="gallery-item"><div class="gallery-item__inner"><img src="{{ asset($imagePath) }}" alt="{{ $imageTitle }} — architectural concept" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__caption">{{ $imageTitle }}<small style="display:block;font:11px Arial,sans-serif;margin-top:10px;letter-spacing:.08em">ARCHITECTURAL CONCEPT</small></div><button class="gallery-item__zoom" data-lightbox="{{ asset($imagePath) }}" data-caption="{{ $imageTitle }} — architectural concept" type="button" aria-label="Enlarge {{ $imageTitle }}">↗</button></div></div></div>
         @endforeach
         </div>
       @endif

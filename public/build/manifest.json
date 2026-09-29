@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-D0BF2T4i.css",
+    "file": "assets/app-DF_2QwmU.css",
     "name": "app",
     "names": [
       "app.css"
@@ -9,7 +9,7 @@
     "isEntry": true
   },
   "resources/css/elite.css": {
-    "file": "assets/elite-DH6qq_lo.css",
+    "file": "assets/elite-B5qxU-8o.css",
     "name": "elite",
     "names": [
       "elite.css"
@@ -45,7 +45,7 @@
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-CqH-_C7a.js",
+    "file": "assets/app-7-60Nqed.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,

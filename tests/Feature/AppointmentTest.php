@@ -81,8 +81,9 @@ class AppointmentTest extends TestCase
             'time_slot' => 'morning-1',
         ]);
         
-        $this->assertTrue($response->isRedirect());
-        $this->assertStringContainsString('wa.me', $response->headers->get('Location'));
+        $response->assertRedirect(route('appointment').'#appointment-form-container')
+            ->assertSessionHas('appointment_success', true)
+            ->assertSessionHas('appointment_whatsapp_url', fn ($url) => str_starts_with($url, 'https://wa.me/'));
 
         $this->assertDatabaseHas('appointments', [
             'patient_name' => 'Test Patient',

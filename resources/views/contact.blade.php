@@ -128,6 +128,10 @@
             <p style="font-size: 15px; color: var(--text-secondary); margin-bottom: 24px; display: block;">
               We've received your message and will respond within 24 hours.
             </p>
+            @if(session('contact_whatsapp_url'))
+              <p><a class="btn btn-primary" href="{{ session('contact_whatsapp_url') }}" target="_blank" rel="noopener noreferrer">Continue on WhatsApp</a></p>
+              <p style="font-size:13px;margin:12px 0 24px">Your request is saved. You can also send it to our team on WhatsApp.</p>
+            @endif
             <button onclick="document.getElementById('contact-success').style.display = 'none'; document.getElementById('contact-form').style.display = 'flex'; document.querySelector('#contact-form-container h3').style.display = 'block'; document.querySelector('#contact-form-container p').style.display = 'block';" class="btn btn-outline">
               Send Another Message
             </button>
@@ -161,7 +165,7 @@
               </div>
               <a href="tel:{{ $siteSettings->phone_href }}" style="display:block;font-size:24px;font-weight:800;margin-bottom:4px;color:white;text-decoration:none">{{ $siteSettings->phone_display }}</a>
               <div style="font-size: 14px; opacity: 0.85;">
-                Call our team for opening updates and service availability.
+                Call our team for appointments and service availability.
               </div>
             </div>
           </div>

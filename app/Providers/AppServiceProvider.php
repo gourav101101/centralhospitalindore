@@ -16,6 +16,12 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        \Illuminate\Support\Facades\RateLimiter::for('admin-login', function (\Illuminate\Http\Request $request) {
+            return \Illuminate\Cache\RateLimiting\Limit::perMinute(5)->by($request->ip());
+        });
+        \Illuminate\Support\Facades\RateLimiter::for('public-forms', function (\Illuminate\Http\Request $request) {
+            return \Illuminate\Cache\RateLimiting\Limit::perMinute(5)->by($request->ip());
+        });
         if ($this->app->environment('production') || env('APP_ENV') === 'production') {
             \Illuminate\Support\Facades\URL::forceScheme('https');
         }

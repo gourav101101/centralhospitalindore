@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Specialities & Services | Central Hospital Indore')
 @section('content')
-@include('partials.inner-hero', ['label' => 'Specialities & services', 'eyebrow' => 'CARE, CONNECTED', 'headline' => 'For every chapter.', 'accent' => 'For all of you.', 'description' => 'Find your speciality. Meet your team. Take the next step with confidence.', 'image' => 'images/atelier/recovery-concept.webp', 'imageAlt' => 'Light-filled patient room interior concept', 'caption' => 'Interior concept · Hospital under construction', 'cta' => 'Explore specialities', 'href' => '#specialities'])
+@include('partials.inner-hero', ['label' => 'Specialities & services', 'eyebrow' => 'CARE, CONNECTED', 'headline' => 'For every chapter.', 'accent' => 'For all of you.', 'description' => 'Find your speciality. Meet your team. Take the next step with confidence.', 'image' => 'images/atelier/recovery-concept.webp', 'imageAlt' => 'Light-filled patient room interior concept', 'caption' => 'Interior concept', 'cta' => 'Explore specialities', 'href' => '#specialities'])
 <section id="specialities" class="v2-section"><div class="container"><div class="v2-heading"><div><span class="eyebrow">OUR MEDICAL SPECIALITIES</span><h2>Connected expertise.<br><span>Considered treatment.</span></h2></div><a class="text-action" href="{{ route('appointment') }}">Plan a consultation ↗</a></div><div class="v2-service-directory">
 @foreach($departments as $department)
 @php($specialityImage = config('speciality-images')[$department->name] ?? null)

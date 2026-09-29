@@ -1,13 +1,13 @@
 @extends('layouts.app')
 @section('title', 'Central Hospital Indore | Care Beyond the Ordinary')
-@section('meta_description', 'A more personal vision for healthcare in Indore. Discover Central Hospital, meet our specialists and enquire about our upcoming hospital.')
+@section('meta_description', 'A more personal vision for healthcare in Indore. Discover Central Hospital, meet our specialists and plan your visit.')
 @section('content')
 <section class="at-hero at-signature-hero" aria-labelledby="hero-title">
  <div class="at-hero-stage">
-  <div class="at-arrival-stage"><figure class="at-arrival"><img src="{{ asset('images/atelier/arrival-concept.webp') }}" width="1536" height="1024" fetchpriority="high" alt="Interior concept of a sunlit hospital reception with natural stone and a courtyard tree"></figure></div>
-  <div class="at-hero-veil" aria-hidden="true"></div><div class="at-image-caption"><span>A warmer welcome.<br><em>A different feeling.</em></span><small>INTERIOR CONCEPT</small></div>
+  <div class="at-arrival-stage"><figure class="at-arrival"><img src="{{ asset('images/hospital/reception-preview.webp') }}" width="1672" height="941" fetchpriority="high" alt="AI completion preview based on the actual Central Hospital reception"></figure></div>
+  <div class="at-hero-veil" aria-hidden="true"></div><div class="at-image-caption"><span>A warmer welcome.<br><em>A different feeling.</em></span><small>AI COMPLETION PREVIEW</small></div>
   <div class="at-wrap at-hero-heading"><div class="at-hero-title-block"><span class="at-eyebrow"><i></i> CARE WITH COMPASSION</span><h1 id="hero-title"><span>Exceptional care.</span><br><em>Entirely personal.</em></h1><p class="at-hero-intro">Expertise you can trust.<br>A welcome you can feel.</p><div class="at-hero-actions"><a class="at-pill at-pill-light" href="{{ route('about') }}">Discover Central Hospital <span aria-hidden="true">↗</span></a><a class="at-hero-doctors" href="{{ route('doctors') }}">Meet our doctors ↗</a></div></div></div>
-  <div class="at-wrap at-hero-foot"><span><i></i> INDORE · A NEW HOME FOR CARE</span><a href="{{ route('contact') }}">Hospital under construction · Opening updates ↗</a></div>
+  <div class="at-wrap at-hero-foot"><span><i></i> INDORE · A NEW HOME FOR CARE</span><a href="{{ route('contact') }}">Open 24 hours | Contact our team ↗</a></div>
  </div>
 </section>
 <section id="our-philosophy" class="at-philosophy">
@@ -25,16 +25,16 @@
  </div>
 </div></section>
 <section class="at-journey" aria-labelledby="spaces-title"><div class="at-journey-sticky"><div class="at-wrap at-section-heading"><div><span class="at-eyebrow">A SENSE OF PLACE</span><h2 id="spaces-title">Room to <em>feel better.</em></h2></div><div class="at-gallery-controls"><button type="button" data-gallery-step="-1" aria-label="Previous hospital concept">←</button><button type="button" data-gallery-step="1" aria-label="Next hospital concept">→</button></div></div><div class="at-gallery-window"><div class="at-gallery-track">
- <figure class="at-space-card"><img src="{{ asset('images/atelier/arrival-concept.webp') }}" width="1536" height="1024" loading="lazy" alt="Illustrative reception concept with warm timber and a sunlit atrium"><figcaption><h3>A calmer arrival.</h3><span>Space to pause. People to guide you.</span></figcaption><small>INTERIOR CONCEPT</small></figure>
+ <figure class="at-space-card"><img src="{{ asset('images/hospital/reception-preview.webp') }}" width="1672" height="941" loading="lazy" alt="AI completion preview of the actual wood-and-white hospital reception"><figcaption><h3>A calmer arrival.</h3><span>Space to pause. People to guide you.</span></figcaption><small>AI COMPLETION PREVIEW</small></figure>
  <figure class="at-space-card"><img src="{{ asset('images/atelier/recovery-concept.webp') }}" width="1536" height="1024" loading="lazy" alt="Illustrative private recovery suite concept with natural light and a visitor chair"><figcaption><h3>A little more comfort.</h3><span>Our vision for thoughtful recovery spaces.</span></figcaption><small>INTERIOR CONCEPT</small></figure>
- <figure class="at-space-card"><img src="{{ asset('images/hospital-concept-v3.webp') }}" width="1448" height="1086" loading="lazy" alt="Architectural visualization of the planned Central Hospital Indore facade"><figcaption><h3>A new chapter for Indore.</h3><span>A place for our vision to take shape.</span></figcaption><small>ARCHITECTURAL VISUALIZATION</small></figure>
- </div></div><div class="at-wrap at-gallery-bottom"><span>Our hospital is under construction. Images show an illustrative vision, not completed facilities.</span><a class="at-link" href="{{ route('gallery') }}">View the gallery ↗</a></div></div></section>
+ <figure class="at-space-card"><img src="{{ asset('images/hospital/exterior-preview.webp') }}" width="1672" height="941" loading="lazy" alt="AI completion preview based on the actual blue-glass Central Hospital building"><figcaption><h3>A new chapter for Indore.</h3><span>A place for our vision to take shape.</span></figcaption><small>AI COMPLETION PREVIEW</small></figure>
+ </div></div><div class="at-wrap at-gallery-bottom"><span>Reception and exterior previews are AI-enhanced from site photos; the recovery room is an illustrative concept.</span><a class="at-link" href="{{ route('gallery') }}">View the gallery ↗</a></div></div></section>
 <section class="at-breathe" aria-labelledby="breathe-title">
  <div class="at-breathe-scene">
   <img src="{{ asset('images/atelier/recovery-concept.webp') }}" width="1536" height="1024" loading="lazy" alt="Interior concept of a quiet recovery room overlooking a leafy garden">
   <div class="at-breathe-shade"></div><div class="at-breathe-shutter at-breathe-shutter-left" aria-hidden="true"></div><div class="at-breathe-shutter at-breathe-shutter-right" aria-hidden="true"></div>
   <div class="at-breathe-copy"><span class="at-eyebrow">ROOM FOR WHAT MATTERS</span><h2 id="breathe-title">A little space.<br>To feel <em>like you.</em></h2><a class="at-link at-link-light" href="{{ route('about') }}">Discover our approach ↗</a></div>
-  <span class="at-breathe-note">INTERIOR CONCEPT · HOSPITAL UNDER CONSTRUCTION</span>
+  <span class="at-breathe-note">INTERIOR CONCEPT</span>
  </div>
 </section>
 <section id="care-team" class="at-doctors at-section"><div class="at-wrap"><div class="at-section-heading"><div><span class="at-eyebrow">THE PEOPLE BEHIND THE PROMISE</span><h2>Specialists in medicine.<br><em>People at heart.</em></h2></div><a class="at-link" href="{{ route('doctors') }}">Meet the team ↗</a></div><div class="at-doctor-grid">
@@ -46,13 +46,13 @@
 <section class="at-considered at-section" aria-labelledby="considered-title"><div class="at-wrap at-considered-grid">
  <div class="at-considered-intro"><span class="at-eyebrow">EVERY STEP, CONSIDERED</span><h2 id="considered-title">At your pace.<br><em>By your side.</em></h2><p>A question. A conversation. A clearer next step.</p><a class="at-link" href="{{ route('contact') }}">Talk to our team ↗</a></div>
  <div class="at-considered-cards">
-  <article class="at-considered-card"><span class="at-card-symbol" aria-hidden="true">↗</span><span class="at-eyebrow">A CONVERSATION FIRST</span><h3>Start with<br>what’s on your mind.</h3><p>Ask about the hospital, our specialists or opening plans. We’ll help you find your starting point.</p><a class="at-link" href="{{ route('contact') }}">Get in touch ↗</a><span class="at-card-art at-card-art-circle" aria-hidden="true"></span></article>
+  <article class="at-considered-card"><span class="at-card-symbol" aria-hidden="true">↗</span><span class="at-eyebrow">A CONVERSATION FIRST</span><h3>Start with<br>what’s on your mind.</h3><p>Ask about the hospital, our specialists or available services. We’ll help you find your starting point.</p><a class="at-link" href="{{ route('contact') }}">Get in touch ↗</a><span class="at-card-art at-card-art-circle" aria-hidden="true"></span></article>
   <article class="at-considered-card"><span class="at-card-symbol" aria-hidden="true">✳</span><span class="at-eyebrow">A PERSONAL CONNECTION</span><h3>Find the person.<br>Behind the expertise.</h3><p>Meet our doctors and explore their areas of care before making your next move.</p><a class="at-link" href="{{ route('doctors') }}">Meet our specialists ↗</a><span class="at-card-art at-card-art-arch" aria-hidden="true"></span></article>
-  <article class="at-considered-card"><span class="at-card-symbol" aria-hidden="true">⌁</span><span class="at-eyebrow">A NEW CHAPTER, TOGETHER</span><h3>Stay close.<br>To what’s coming.</h3><p>Our hospital is taking shape. Connect with the team for opening updates and service availability.</p><a class="at-link" href="{{ route('contact') }}">Stay connected ↗</a><span class="at-card-art at-card-art-lines" aria-hidden="true"></span></article>
+  <article class="at-considered-card"><span class="at-card-symbol" aria-hidden="true">⌁</span><span class="at-eyebrow">A NEW CHAPTER, TOGETHER</span><h3>Stay connected.<br>To your care.</h3><p>Connect with our team for appointments and service availability.</p><a class="at-link" href="{{ route('contact') }}">Stay connected ↗</a><span class="at-card-art at-card-art-lines" aria-hidden="true"></span></article>
  </div>
 </div></section>
 @if($testimonials->isNotEmpty())
 <section class="at-stories at-section"><div class="at-wrap"><div class="at-section-heading"><div><span class="at-eyebrow">IN THEIR OWN WORDS</span><h2>Care that <em>stays with you.</em></h2></div><a class="at-link" href="{{ route('patient-stories') }}">All patient stories ↗</a></div><div class="at-story-grid">@foreach($testimonials->take(2) as $story)<article><blockquote>{{ \Illuminate\Support\Str::limit($story->content,240) }}</blockquote><p><span>{{ mb_substr($story->client_name,0,1) }}</span>{{ $story->client_name }}</p></article>@endforeach</div></div></section>
 @endif
-<section class="at-invitation"><div class="at-wrap"><span class="at-eyebrow">CENTRAL HOSPITAL INDORE</span><h2>Your health.<br><em>Our whole heart.</em></h2><div class="at-invitation-actions"><a class="at-pill at-pill-light" href="{{ route('contact') }}">Let’s connect <span>↗</span></a><a href="tel:{{ $siteSettings->phone_href }}">{{ $siteSettings->phone_display }}</a></div><div class="at-opening"><span><i></i> OUR NEXT CHAPTER IS TAKING SHAPE</span><p>Hospital under construction. Contact our team for opening updates and service availability.</p></div></div><span class="at-invitation-outline" aria-hidden="true">Care.</span></section>
+<section class="at-invitation"><div class="at-wrap"><span class="at-eyebrow">CENTRAL HOSPITAL INDORE</span><h2>Your health.<br><em>Our whole heart.</em></h2><div class="at-invitation-actions"><a class="at-pill at-pill-light" href="{{ route('contact') }}">Let’s connect <span>↗</span></a><a href="tel:{{ $siteSettings->phone_href }}">{{ $siteSettings->phone_display }}</a></div><div class="at-opening"><span><i></i> OPEN 24 HOURS</span><p>Contact our team for appointments and service availability.</p></div></div><span class="at-invitation-outline" aria-hidden="true">Care.</span></section>
 @endsection
