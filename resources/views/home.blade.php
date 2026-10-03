@@ -54,5 +54,8 @@
 @if($testimonials->isNotEmpty())
 <section class="at-stories at-section"><div class="at-wrap"><div class="at-section-heading"><div><span class="at-eyebrow">IN THEIR OWN WORDS</span><h2>Care that <em>stays with you.</em></h2></div><a class="at-link" href="{{ route('patient-stories') }}">All patient stories ↗</a></div><div class="at-story-grid">@foreach($testimonials->take(2) as $story)<article><blockquote>{{ \Illuminate\Support\Str::limit($story->content,240) }}</blockquote><p><span>{{ mb_substr($story->client_name,0,1) }}</span>{{ $story->client_name }}</p></article>@endforeach</div></div></section>
 @endif
+@if($videos->isNotEmpty())
+<section class="at-section" aria-labelledby="home-videos-title"><div class="at-wrap"><div class="at-section-heading"><div><span class="at-eyebrow">WATCH & DISCOVER</span><h2 id="home-videos-title">A closer look.<br><em>A human connection.</em></h2></div><a class="at-link" href="{{ route('videos') }}">All videos &#8599;</a></div>@include('partials.video-grid')</div></section>
+@endif
 <section class="at-invitation"><div class="at-wrap"><span class="at-eyebrow">CENTRAL HOSPITAL INDORE</span><h2>Your health.<br><em>Our whole heart.</em></h2><div class="at-invitation-actions"><a class="at-pill at-pill-light" href="{{ route('contact') }}">Let’s connect <span>↗</span></a><a href="tel:{{ $siteSettings->phone_href }}">{{ $siteSettings->phone_display }}</a></div><div class="at-opening"><span><i></i> OPEN 24 HOURS</span><p>Contact our team for appointments and service availability.</p></div></div><span class="at-invitation-outline" aria-hidden="true">Care.</span></section>
 @endsection

@@ -29,7 +29,7 @@ class AdminFeedbackController extends Controller
             $query->where('rating', $request->rating);
         }
 
-        $feedbacks = $query->paginate(15);
+        $feedbacks = $query->paginate(15)->withQueryString();
         return view('admin.feedback.index', compact('feedbacks'));
     }
 

@@ -53,7 +53,7 @@ class AdminBlogController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|string|max:255',
-            'slug' => 'nullable|string|max:255|unique:blogs,slug',
+            'slug' => 'nullable|string|max:255|regex:/^[a-zA-Z0-9_-]+$/|unique:blogs,slug',
             'author' => 'required|string|max:255',
             'tag' => 'nullable|string|max:100',
             'image' => 'nullable|image|mimes:jpg,jpeg,png,webp,svg|max:5120',
@@ -95,7 +95,7 @@ class AdminBlogController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|string|max:255',
-            'slug' => 'nullable|string|max:255|unique:blogs,slug,'.$blog->id,
+            'slug' => 'nullable|string|max:255|regex:/^[a-zA-Z0-9_-]+$/|unique:blogs,slug,'.$blog->id,
             'author' => 'required|string|max:255',
             'tag' => 'nullable|string|max:100',
             'image' => 'nullable|image|mimes:jpg,jpeg,png,webp,svg|max:5120',
@@ -120,6 +120,9 @@ class AdminBlogController extends Controller
             $validated['published_at'] = $validated['published_at'] ?? now();
         }
 
+        if (empty($validated['slug'])) {
+            unset($validated['slug']);
+        }
         $blog->update($validated);
 
         return redirect()->route('admin.blogs.index')->with('success', 'Blog updated successfully!');

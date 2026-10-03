@@ -10,7 +10,7 @@ class SeoController extends Controller
     public function sitemap()
     {
         $urls = collect(['home', 'about', 'doctors', 'services', 'contact', 'appointment',
-            'gallery', 'downloads', 'health-library', 'patient-stories', 'patient-guide', 'privacy', 'terms'])
+            'gallery', 'videos', 'downloads', 'health-library', 'patient-stories', 'patient-guide', 'privacy', 'terms'])
             ->map(fn ($name) => route($name));
         foreach (Doctor::active()->get() as $doctor) {
             $urls->push(route('doctor.profile', $doctor));

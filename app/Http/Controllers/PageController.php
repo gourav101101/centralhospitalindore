@@ -19,6 +19,7 @@ class PageController extends Controller
     public function home()
     {
         return view('home', [
+            'videos' => \App\Models\Video::active()->ordered()->take(3)->get(),
             'doctors' => Doctor::active()->ordered()->get(),
             'departments' => Department::active()->ordered()->get(),
             'blogs' => Blog::published()->latest('published_at')->take(3)->get(),
@@ -52,6 +53,11 @@ class PageController extends Controller
         return view('services', ['departments' => Department::active()->ordered()->get()]);
     }
 
+    public function videos()
+    {
+        return view('videos', ['videos' => \App\Models\Video::active()->ordered()->paginate(9)]);
+    }
+
     public function gallery()
     {
         return view('gallery', ['images' => Gallery::active()->ordered()->get()]);
@@ -59,9 +65,9 @@ class PageController extends Controller
 
     public function downloads()
     {
-        $publicRoot = realpath(public_path()).DIRECTORY_SEPARATOR;
+        $publicRoot = realpath(config('filesystems.web_root')).DIRECTORY_SEPARATOR;
         $brochures = Brochure::latest()->get()->filter(function ($brochure) use ($publicRoot) {
-            $path = realpath(public_path($brochure->file_path));
+            $path = realpath($publicRoot.$brochure->file_path);
             return $path && str_starts_with($path, $publicRoot) && is_file($path);
         });
 

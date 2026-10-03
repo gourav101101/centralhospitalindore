@@ -20,23 +20,24 @@
         </div>
       @endif
 
+      @if($errors->any())<div role="alert" style="color:#b91c1c;margin-bottom:20px"><ul>@foreach($errors->all() as $error)<li>{{ $error }}</li>@endforeach</ul></div>@endif
       <form action="{{ route('feedback.store') }}" method="POST">
         @csrf
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
           <div>
             <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: var(--text);">Your Name <span style="color: red;">*</span></label>
-            <input type="text" name="patient_name" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-family: inherit;">
+            <input type="text" name="patient_name" value="{{ old('patient_name') }}" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-family: inherit;">
           </div>
           <div>
             <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: var(--text);">Department <span style="color: red;">*</span></label>
             <select name="department" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-family: inherit; background: white;">
               <option value="">Select department</option>
-              <option value="OPD">OPD Consultation</option>
-              <option value="IPD">In-Patient (Admitted)</option>
-              <option value="Emergency">Emergency</option>
-              <option value="Diagnostics">Diagnostics / Lab</option>
-              <option value="Pharmacy">Pharmacy</option>
-              <option value="Other">Other</option>
+              <option value="OPD" @selected(old('department') === 'OPD')>OPD Consultation</option>
+              <option value="IPD" @selected(old('department') === 'IPD')>In-Patient (Admitted)</option>
+              <option value="Emergency" @selected(old('department') === 'Emergency')>Emergency</option>
+              <option value="Diagnostics" @selected(old('department') === 'Diagnostics')>Diagnostics / Lab</option>
+              <option value="Pharmacy" @selected(old('department') === 'Pharmacy')>Pharmacy</option>
+              <option value="Other" @selected(old('department') === 'Other')>Other</option>
             </select>
           </div>
         </div>
@@ -46,7 +47,7 @@
           <div style="display: flex; gap: 10px;">
             @foreach([1,2,3,4,5] as $rating)
               <label style="cursor: pointer; display: flex; align-items: center; gap: 4px;">
-                <input type="radio" name="rating" value="{{ $rating }}" required>
+                <input type="radio" name="rating" value="{{ $rating }}" @checked(old('rating') == $rating) required>
                 {{ $rating }} Star
               </label>
             @endforeach
@@ -55,7 +56,7 @@
 
         <div style="margin-bottom: 24px;">
           <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: var(--text);">Your Feedback <span style="color: red;">*</span></label>
-          <textarea name="feedback" required rows="4" style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-family: inherit; resize: vertical;"></textarea>
+          <textarea name="feedback" required rows="4" style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-family: inherit; resize: vertical;">{{ old('feedback') }}</textarea>
         </div>
 
         <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 14px;">Submit Feedback</button>

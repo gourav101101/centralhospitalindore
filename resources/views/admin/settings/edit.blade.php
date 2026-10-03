@@ -102,6 +102,11 @@
       </div>
     </div>
 
+    <div class="detail-grid">
+      @foreach(['maps_url' => 'Google Maps listing URL', 'directions_url' => 'Directions URL', 'map_embed_url' => 'Map embed URL', 'outside_view_url' => 'Outside view URL'] as $field => $label)
+      <div class="detail-item"><label for="{{ $field }}">{{ $label }}</label><input id="{{ $field }}" type="url" class="form-control" style="width:100%" name="{{ $field }}" value="{{ old($field, $settings->$field) }}"></div>
+      @endforeach
+    </div>
     <div style="margin-top:24px; padding-top:20px; border-top:1px solid var(--border); text-align: right;">
       <button class="button" style="padding: 10px 24px;">Save Settings</button>
     </div>

@@ -32,13 +32,23 @@ class AdminDepartmentController extends Controller
 
     public function update(Request $request, Department $department)
     {
-        $department->update($this->data($request));
+        $data = $this->data($request);
+        \Illuminate\Support\Facades\DB::transaction(function () use ($department, $data) {
+            $oldName = $department->name;
+            $department->update($data);
+            if ($oldName !== $department->name) {
+                \App\Models\Doctor::where('department', $oldName)->update(['department' => $department->name]);
+            }
+        });
 
         return redirect()->route('admin.departments.index')->with('success', 'Department updated.');
     }
 
     public function destroy(Department $department)
     {
+        if (\App\Models\Doctor::where('department', $department->name)->exists()) {
+            return back()->withErrors(['department' => 'Reassign the doctors in this department before removing it.']);
+        }
         $department->delete();
 
         return back()->with('success', 'Department removed.');

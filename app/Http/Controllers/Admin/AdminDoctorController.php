@@ -33,7 +33,7 @@ class AdminDoctorController extends Controller
 
     public function create()
     {
-        return view('admin.doctors.form', ['doctor' => new Doctor]);
+        return view('admin.doctors.form', ['doctor' => new Doctor, 'departments' => \App\Models\Department::ordered()->get()]);
     }
 
     public function store(Request $request)
@@ -41,7 +41,7 @@ class AdminDoctorController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'designation' => 'required|string|max:255',
-            'department' => 'required|string|max:255',
+            'department' => 'required|string|max:255|exists:departments,name',
             'experience' => 'nullable|string|max:100',
             'qualification' => 'nullable|string|max:255',
             'photo' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:3072',
@@ -67,7 +67,7 @@ class AdminDoctorController extends Controller
 
     public function edit(Doctor $doctor)
     {
-        return view('admin.doctors.form', compact('doctor'));
+        return view('admin.doctors.form', ['doctor' => $doctor, 'departments' => \App\Models\Department::ordered()->get()]);
     }
 
     public function update(Request $request, Doctor $doctor)
@@ -75,7 +75,7 @@ class AdminDoctorController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'designation' => 'required|string|max:255',
-            'department' => 'required|string|max:255',
+            'department' => 'required|string|max:255|exists:departments,name',
             'experience' => 'nullable|string|max:100',
             'qualification' => 'nullable|string|max:255',
             'photo' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:3072',
