@@ -138,6 +138,10 @@
     .panel-left { display: none; }
     .panel-right { background: white; padding: 40px 24px; }
     .login-box { border: 0; box-shadow: none; padding: 0; }
+    body { min-height: 100svh; }
+    .field input[type="email"], .field input[type="password"] { min-height: 48px; font-size: 16px; }
+    .btn-signin, .remember { min-height: 48px; }
+    .remember input[type="checkbox"] { width: 20px; height: 20px; }
   }
 </style>
 </head>

@@ -209,11 +209,12 @@
       .detail-grid { grid-template-columns:1fr; }.detail-item:nth-child(2) { border-top:1px solid #eef0f3; }
     }
   </style>
+  <link rel="stylesheet" href="{{ asset('css/admin-responsive.css') }}?v=1">
 </head>
 <body>
 <div class="shell">
-  <aside class="side">
-    <div class="side-header">
+  <aside class="side" id="admin-navigation" aria-label="Admin navigation" tabindex="-1">
+    <div class="side-header"><button type="button" class="menu-close" aria-label="Close navigation">&times;</button>
       <div class="brand">
         <div class="brand-icon">
           <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
@@ -225,7 +226,7 @@
       </div>
     </div>
 
-    <nav class="nav">
+    <nav class="nav" aria-label="Admin sections">
       <div class="nav-section">
         <div class="nav-label">Overview</div>
         <a href="{{ route('admin.dashboard') }}" class="{{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
@@ -286,11 +287,13 @@
     </div>
   </aside>
 
-  <div class="main">
+  <div class="menu-backdrop" hidden></div><div class="main" id="admin-main">
     <header class="topbar">
       <div class="topbar-left">
-        <div class="h1">@yield('page-title', 'Dashboard')</div>
-        <div class="breadcrumb">@yield('breadcrumb', 'Central Hospital Indore Admin')</div>
+        <button type="button" class="menu-toggle" aria-controls="admin-navigation" aria-expanded="false" aria-label="Open navigation"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <div class="topbar-heading">
+        <h1>@yield('page-title', 'Dashboard')</h1>
+        <div class="breadcrumb">@yield('breadcrumb', 'Central Hospital Indore Admin')</div></div>
       </div>
       <div class="topbar-right">
         <form method="post" action="{{ route('admin.logout') }}">
@@ -315,6 +318,7 @@
   </div>
 </div>
 
+<script src="{{ asset('js/admin-navigation.js') }}?v=1"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
